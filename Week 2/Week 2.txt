@@ -1,0 +1,20 @@
+1.
+The child process retains its own value for x.
+
+2.
+  // insert your code below this line
+  
+  int id = fork();
+  if (id == 0) {
+    printf("Hello from the child\n");
+  } 
+  else if (id > 0) {
+    sleep(1);
+    printf("Goodbye from the parent\n");
+  } 
+  else {
+    printf("fork did not work as intended\n");
+    exit(1);
+  }  
+  
+  // insert your code above this line
